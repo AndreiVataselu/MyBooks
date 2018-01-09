@@ -9,5 +9,6 @@ target 'MyBooks' do
     pod 'SWXMLHash'
     pod 'Alamofire'
     pod 'Kingfisher'
+    pod 'BarcodeScanner'
 
 end

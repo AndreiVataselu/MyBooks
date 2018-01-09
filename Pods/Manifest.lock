@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.5.1)
+  - BarcodeScanner (3.0.0)
   - Kingfisher (4.2.0)
   - SWXMLHash (4.2.3)
 
 DEPENDENCIES:
   - Alamofire
+  - BarcodeScanner
   - Kingfisher
   - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  BarcodeScanner: 4ba61e8b2d50da7b17685085d4bb8e1a0c14613e
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   SWXMLHash: 6ab10e1cb4567d88cd3634be0bf331a7839945dd
 
-PODFILE CHECKSUM: 8bec6d11630e4e4d632eb2109a784dcd5719c6c3
+PODFILE CHECKSUM: 2439f89da3acf95ddd02b439e82a97afa76e68fe
 
 COCOAPODS: 1.3.1
