@@ -9,12 +9,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let networking = Networking.createThread()
         
         var xmlFile : XML?
 
-        _ = networking.getXMLfor(ISBN: "9781409376415") { (response) in
+        Networking.getXMLfor(ISBN: "9781409376415") { (response) in
             switch response {
             case .success(let data):
                 xmlFile = XML(xmlResponse: data)

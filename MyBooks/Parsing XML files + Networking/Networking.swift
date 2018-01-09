@@ -17,16 +17,9 @@ enum XMLResult {
 
 class Networking {
     
-    private init() {
-            
-    }
+    private init() {}
     
-    static func createThread() -> Networking {
-        return Networking()
-    }
-
-    
-    func getXMLfor(ISBN: String, xml: @escaping (XMLResult) -> () ) {
+    static func getXMLfor(ISBN: String, xml: @escaping (XMLResult) -> () ) {
         let URL = "https://www.goodreads.com/book/isbn/\(ISBN)?key=C30CIoFrgmG4NFSJujYw"
         
         let queue = DispatchQueue(label: "alamofire", qos: .background, attributes: .concurrent)
