@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         
         var xmlFile : XML?
 
-        _ = networking.getXMLfor(ISBN: "9789731931937") { (response) in
+        _ = networking.getXMLfor(ISBN: "9781409376415") { (response) in
             switch response {
             case .success(let data):
                 xmlFile = XML(xmlResponse: data)
@@ -22,7 +22,22 @@ class ViewController: UIViewController {
             case .failed(let error):
                 print(error)
             }
+            
+            if let xmlIsSuccesful = xmlFile {
+                if xmlIsSuccesful.validFile {
+                    let bookDetails = xmlIsSuccesful.getBookDetails()
+                    
+                    for detail in bookDetails {
+                        print(detail)
+                    }
+                    
+                } else {
+                    print("Book not found!")
+                }
+            }
+            
         }
+        
     }
     
     

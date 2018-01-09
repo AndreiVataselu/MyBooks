@@ -40,7 +40,7 @@ class XML {
         }
         
         //MARK: Book author
-        switch xmlFile["GoodreadsResponse"]["book"]["authors"]["author"]["name"] {
+        switch xmlFile["GoodreadsResponse"]["book"]["authors"]["author"][0]["name"] {
         case .element(let authorName):
             bookDetails["author"] = authorName.text
         case .xmlError(let error):
@@ -50,9 +50,24 @@ class XML {
         }
         
         //MARK: No. of pages
+        switch xmlFile["GoodreadsResponse"]["book"]["num_pages"] {
+        case .element(let numPages):
+            bookDetails["pages"] = numPages.text
+        case.xmlError(let error):
+            print("Error no of pages -> \(error)")
+            
+        default:break
+        }
         
-        
-        //MARK: Book image
+        //MARK: Book image URL
+        switch xmlFile["GoodreadsResponse"]["book"]["image_url"] {
+        case .element(let imageURL):
+            bookDetails["imageURL"] = imageURL.text
+        case .xmlError(let error):
+            print("Error book image url -> \(error)")
+            
+        default:break
+        }
         
         return bookDetails
     }
