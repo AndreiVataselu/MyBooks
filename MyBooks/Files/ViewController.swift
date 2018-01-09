@@ -12,17 +12,20 @@ class ViewController: UIViewController {
 
         let networking = Networking.createThread()
         
-        let xmlFile = networking.getXMLfor(ISBN: "9789731931937") { (response) in
+        var xmlFile : XML?
+
+        _ = networking.getXMLfor(ISBN: "9789731931937") { (response) in
             switch response {
             case .success(let data):
-                let xml = XML(xml: data)
-                
+                xmlFile = XML(xmlResponse: data)
+
             case .failed(let error):
                 print(error)
             }
         }
-        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
