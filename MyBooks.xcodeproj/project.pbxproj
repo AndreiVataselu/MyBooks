@@ -93,6 +93,7 @@
 		F1DC5EF620039A6F003038E7 /* MyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				F1E328CB200508CF003CE197 /* Extension Files */,
 				F1FA3F9A2003DD98004C6F81 /* Parsing XML files + Networking */,
 				F1D6B4482003BF9300DE23B4 /* Files */,
 				F1DC5EFB20039A6F003038E7 /* Main.storyboard */,
@@ -102,6 +103,13 @@
 				F1DC5EFE20039A6F003038E7 /* MyBooks.xcdatamodeld */,
 			);
 			path = MyBooks;
+			sourceTree = "<group>";
+		};
+		F1E328CB200508CF003CE197 /* Extension Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Extension Files";
 			sourceTree = "<group>";
 		};
 		F1FA3F9A2003DD98004C6F81 /* Parsing XML files + Networking */ = {
@@ -210,11 +218,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,5 +8,6 @@ target 'MyBooks' do
 
     pod 'SWXMLHash'
     pod 'Alamofire'
+    pod 'Kingfisher'
 
 end

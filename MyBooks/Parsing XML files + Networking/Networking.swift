@@ -22,7 +22,7 @@ class Networking {
     static func getXMLfor(ISBN: String, xml: @escaping (XMLResult) -> () ) {
         let URL = "https://www.goodreads.com/book/isbn/\(ISBN)?key=C30CIoFrgmG4NFSJujYw"
         
-        let queue = DispatchQueue(label: "alamofire", qos: .background, attributes: .concurrent)
+        let queue = DispatchQueue(label: "com.andreivataselu", qos: .background, attributes: .concurrent)
         
         Alamofire.request(URL).responseString(queue: queue) {
             (response) in
