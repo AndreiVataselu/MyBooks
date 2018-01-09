@@ -10,11 +10,6 @@ import Foundation
 import Alamofire
 import SWXMLHash
 
-enum XMLResult {
-    case success(XMLIndexer)
-    case failed(Error)
-}
-
 class Networking {
     
     private init() {}

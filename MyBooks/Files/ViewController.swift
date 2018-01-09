@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     
-    func updateUIfor(ISBN: String, completed: @escaping (Bool) -> Void){
+    func updateUIfor(ISBN: String, foundBook: @escaping (Bool) -> Void){
         
         var xmlFile : XML?
 
@@ -65,12 +65,12 @@ class ViewController: UIViewController {
                         self.bookAuthorLabel.text = bookDetails["author"]
                         self.bookPageNumber.text = bookDetails["pages"]
                         self.bookImage.kf.setImage(with: URL(string: bookDetails["imageURL"]!))
-                        completed(true)
+                        foundBook(true)
                     }
                     
                 } else {
                     print("Book not found!")
-                        completed(true)
+                        foundBook(false)
                 }
             }
             
@@ -95,12 +95,15 @@ extension ViewController: BarcodeScannerCodeDelegate {
     
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         print(code)
-        updateUIfor(ISBN: code) { (completed) in
-            if completed {
-                
+        updateUIfor(ISBN: code) { (foundBook) in
+            if foundBook {
                 controller.reset()
                 controller.dismiss(animated: true, completion: nil)
             }
+            //TODO: When book is not found
+            
+            
+            
         }
     }
 }
