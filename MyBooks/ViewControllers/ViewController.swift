@@ -47,7 +47,7 @@ extension ViewController: BarcodeScannerCodeDelegate {
         print(code)
         
         
-        userLibrary.addBooktoLibrary(ISBN: code) { (foundBook) in
+        userLibrary.addBook(ISBN: code) { (foundBook) in
             if foundBook {
                 
                 DispatchQueue.main.async {

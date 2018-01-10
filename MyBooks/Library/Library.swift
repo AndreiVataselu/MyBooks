@@ -23,7 +23,7 @@ class Library {
         return Library()
     }
     
-    func addBooktoLibrary(ISBN: String, foundBook: @escaping (Bool) -> Void){
+    func addBook(ISBN: String, foundBook: @escaping (Bool) -> Void){
         
         var xmlFile : XML?
         var errorXML : Error?
