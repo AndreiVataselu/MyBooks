@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1572D75CD1AE8400F712AB35 /* Pods_MyBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */; };
+		F10E6CDB200625B10075E6C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDA200625B10075E6C3 /* Book.swift */; };
+		F10E6CDD200626A20075E6C3 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDC200626A20075E6C3 /* Library.swift */; };
 		F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AADA920054C5500BEB80F /* XMLResult.swift */; };
 		F1D6B44A2003BFB500DE23B4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6B4492003BFB500DE23B4 /* Networking.swift */; };
 		F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EF720039A6F003038E7 /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 		29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7A0F8866666C178ED8EAEB /* Pods-MyBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		C7735DF047D2AAC706139B54 /* Pods-MyBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.release.xcconfig"; sourceTree = "<group>"; };
+		F10E6CDA200625B10075E6C3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		F10E6CDC200626A20075E6C3 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F15AADA920054C5500BEB80F /* XMLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResult.swift; sourceTree = "<group>"; };
 		F1D6B4492003BFB500DE23B4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F1DC5EF420039A6F003038E7 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,10 +69,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F1D6B4482003BF9300DE23B4 /* Files */ = {
+		F10E6CDE20062A1F0075E6C3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F10E6CDC200626A20075E6C3 /* Library.swift */,
+				F10E6CDA200625B10075E6C3 /* Book.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		F10E6CDF20062A2B0075E6C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F1DC5EF920039A6F003038E7 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1D6B4482003BF9300DE23B4 /* Files */ = {
+			isa = PBXGroup;
+			children = (
 				F1DC5EF720039A6F003038E7 /* AppDelegate.swift */,
 			);
 			path = Files;
@@ -95,6 +115,8 @@
 		F1DC5EF620039A6F003038E7 /* MyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				F10E6CDF20062A2B0075E6C3 /* ViewControllers */,
+				F10E6CDE20062A1F0075E6C3 /* Library */,
 				F1E328CB200508CF003CE197 /* Extension Files */,
 				F1FA3F9A2003DD98004C6F81 /* Networking Files */,
 				F1D6B4482003BF9300DE23B4 /* Files */,
@@ -261,6 +283,8 @@
 			files = (
 				F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */,
 				F1FA3F9C2003DDB8004C6F81 /* XML.swift in Sources */,
+				F10E6CDB200625B10075E6C3 /* Book.swift in Sources */,
+				F10E6CDD200626A20075E6C3 /* Library.swift in Sources */,
 				F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */,
 				F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */,
 				F1DC5F0020039A6F003038E7 /* MyBooks.xcdatamodeld in Sources */,

@@ -13,15 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var bookAuthorLabel : UILabel!
     @IBOutlet weak var bookPageNumber : UILabel!
     @IBOutlet weak var bookImage : UIImageView!
-    let controller = BarcodeScannerController()
-
+    let barcodeScanner = BarcodeScannerController()
+    var library = Library.newLibrary(books: [Book]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controller.codeDelegate = self
-        controller.errorDelegate = self
-        controller.dismissalDelegate = self
+        barcodeScanner.codeDelegate = self
+        barcodeScanner.errorDelegate = self
+        barcodeScanner.dismissalDelegate = self
         
 //        //MARK: - Temporary loading screen
 //        let loadingScreen = UIView(frame: self.view.frame)
@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     func updateUIfor(ISBN: String, foundBook: @escaping (Bool) -> Void){
         
         var xmlFile : XML?
+        var errorXML : Error?
 
         Networking.getXMLfor(ISBN: ISBN) { (response) in
             switch response {
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
                 xmlFile = XML(xmlResponse: data)
                 
             case .failed(let error):
-                print(error)
+                errorXML = error
             }
             
             if let xmlIsSuccesful = xmlFile {
@@ -65,6 +66,8 @@ class ViewController: UIViewController {
                         self.bookAuthorLabel.text = bookDetails["author"]
                         self.bookPageNumber.text = bookDetails["pages"]
                         self.bookImage.kf.setImage(with: URL(string: bookDetails["imageURL"]!))
+                        
+                        
                         foundBook(true)
                     }
                     
@@ -72,13 +75,15 @@ class ViewController: UIViewController {
                     print("Book not found!")
                         foundBook(false)
                 }
+            } else {
+                foundBook(false)
+                print("Error - \(String(describing: errorXML))")
             }
-            
         }
     }
     
     @IBAction func scanCode() {
-        present(controller, animated: true, completion: nil)
+        present(barcodeScanner, animated: true, completion: nil)
     }
     
 

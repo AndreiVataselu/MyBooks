@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SWXMLHash
+import Kingfisher
 
 class Networking {
     
@@ -29,5 +30,8 @@ class Networking {
             }
         }
     }
+    
+    
+    //TODO: Image download function
     
 }
