@@ -32,7 +32,6 @@ class Networking {
     }
     
     
-    //TODO: Image download function
     static func downloadImageFor(link: String, imageResult: @escaping (UIImage) -> ()) {
         ImageDownloader.default.downloadImage(with: URL(string: link)!) { (image, error, url, data) in
             if let imageFound = image {
