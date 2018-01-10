@@ -65,8 +65,12 @@ class ViewController: UIViewController {
                         self.bookTitleLabel.text = bookDetails["title"]
                         self.bookAuthorLabel.text = bookDetails["author"]
                         self.bookPageNumber.text = bookDetails["pages"]
-                        self.bookImage.kf.setImage(with: URL(string: bookDetails["imageURL"]!))
                         
+                        Networking.downloadImageFor(link: bookDetails["imageURL"]!, imageResult: { (image) in
+                            self.bookImage.image = image
+                        })
+                        
+//                        self.bookImage.kf.setImage(with: URL(string: bookDetails["imageURL"]!))
                         
                         foundBook(true)
                     }
