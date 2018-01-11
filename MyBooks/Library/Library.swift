@@ -9,7 +9,9 @@
 import Foundation
 import Kingfisher
 import SWXMLHash
+import Firebase
 
+var databaseReference : DatabaseReference?
 
 class Library {
     
@@ -23,47 +25,50 @@ class Library {
         return Library()
     }
     
+    func checkForExistingBook(ISBN: String, bookExists: @escaping (Bool) -> Void){
+        databaseReference!.child("users").child(User.id).child("books").observeSingleEvent(of: DataEventType.value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary ?? [:]
+            if let _ = value[ISBN] {
+                bookExists(true)
+            } else {
+                bookExists(false)
+            }
+
+        }
+    }
+    
     func addBook(ISBN: String, foundBook: @escaping (Bool) -> Void){
         
         var xmlFile : XML?
         var errorXML : Error?
         
-        Networking.getXMLfor(ISBN: ISBN) { (response) in
-            switch response {
-            case .success(let data):
-                xmlFile = XML(xmlResponse: data)
-                
-            case .failed(let error):
-                errorXML = error
-            }
-            
-            if let xmlIsSuccesful = xmlFile {
-                if xmlIsSuccesful.validFile {
-                    let bookDetails = xmlIsSuccesful.getBookDetails()
-                    
-                    var bookImage = UIImage()
-                    
-                    Networking.downloadImageFor(link: bookDetails["imageURL"]!, imageResult: { (image) in
-                        bookImage = image
+                Networking.getXMLfor(ISBN: ISBN) { (response) in
+                    switch response {
+                    case .success(let data):
+                        xmlFile = XML(xmlResponse: data)
                         
-                    })
+                    case .failed(let error):
+                        errorXML = error
+                    }
                     
-                    //MARK: Adding book to DB.
-                    self.books.append(Book(bookTitle: bookDetails["title"]!,
-                                                      bookAuthor: bookDetails["author"]!,
-                                                      bookNumOfPages: Int(bookDetails["pages"]!)!,
-                                                      bookPicture: bookImage))
-                    
-                    foundBook(true)
-                    
-                } else {
-                    print("Book not found!")
-                    foundBook(false)
+                    if let xmlIsSuccesful = xmlFile {
+                        if xmlIsSuccesful.validFile {
+                            let bookDetails = xmlIsSuccesful.getBookDetails()
+                            
+                            //MARK: Adding book to DB.
+                            databaseReference!.child("users").child(User.id).child("books").child(ISBN).setValue(bookDetails)
+                            
+                            foundBook(true)
+                            
+                        } else {
+                            print("Book not found!")
+                            foundBook(false)
+                        }
+                    } else {
+                        foundBook(false)
+                        print("Error - \(String(describing: errorXML))")
+                    }
                 }
-            } else {
-                foundBook(false)
-                print("Error - \(String(describing: errorXML))")
             }
         }
-    }
-}
+    

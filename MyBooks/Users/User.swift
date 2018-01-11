@@ -14,6 +14,8 @@ class User {
     
     private init(){}
     
+    static var id = (Auth.auth().currentUser?.uid)!
+    
     static var isLoggedIn : Bool {
         if Auth.auth().currentUser != nil {
             return true
@@ -21,6 +23,7 @@ class User {
             return false
         }
     }
+    
     
    static func signUp(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
@@ -58,5 +61,11 @@ class User {
             print("Couldn't Sign out! \(error)")
             didSignOut(false)
         }
+    }
+    
+    static func fetchLibrary() -> Library {
+        let userLibrary = Library.newLibrary()
+        
+        return userLibrary
     }
 }

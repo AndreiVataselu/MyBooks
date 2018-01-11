@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         barcodeScanner.errorDelegate = self
         barcodeScanner.dismissalDelegate = self
         
+        User.login(email: "vataseluandrei1@gmail.com", password: "parolamea") { (_) in }
+        
         }
     
     
@@ -40,41 +42,3 @@ class ViewController: UIViewController {
 
 
 }
-
-
-extension ViewController: BarcodeScannerCodeDelegate {
-    
-    func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
-        print(code)
-        
-        
-        userLibrary.addBook(ISBN: code) { (foundBook) in
-            if foundBook {
-                
-                DispatchQueue.main.async {
-                print(self.userLibrary.books.count)
-                controller.reset()
-                controller.dismiss(animated: true, completion: nil)
-                }
-                
-            }
-            //TODO: When book is not found
-        }
-    }
-}
-
-extension ViewController: BarcodeScannerErrorDelegate {
-    
-    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
-        print(error)
-    }
-}
-
-extension ViewController: BarcodeScannerDismissalDelegate {
-    
-    func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
-        controller.reset()
-        controller.dismiss(animated: true, completion: nil)
-    }
-}
-

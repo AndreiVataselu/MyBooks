@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1572D75CD1AE8400F712AB35 /* Pods_MyBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */; };
+		F104538D2007E0C2000035AC /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104538C2007E0C2000035AC /* VCExtension.swift */; };
 		F10E6CDB200625B10075E6C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDA200625B10075E6C3 /* Book.swift */; };
 		F10E6CDD200626A20075E6C3 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDC200626A20075E6C3 /* Library.swift */; };
 		F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AADA920054C5500BEB80F /* XMLResult.swift */; };
@@ -27,6 +28,7 @@
 		29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7A0F8866666C178ED8EAEB /* Pods-MyBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		C7735DF047D2AAC706139B54 /* Pods-MyBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.release.xcconfig"; sourceTree = "<group>"; };
+		F104538C2007E0C2000035AC /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		F10E6CDA200625B10075E6C3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		F10E6CDC200626A20075E6C3 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F15AADA920054C5500BEB80F /* XMLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResult.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		F1E328CB200508CF003CE197 /* Extension Files */ = {
 			isa = PBXGroup;
 			children = (
+				F104538C2007E0C2000035AC /* VCExtension.swift */,
 			);
 			path = "Extension Files";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -274,6 +278,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F104538D2007E0C2000035AC /* VCExtension.swift in Sources */,
 				F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */,
 				F1FA3F9C2003DDB8004C6F81 /* XML.swift in Sources */,
 				F10E6CDB200625B10075E6C3 /* Book.swift in Sources */,
@@ -454,7 +460,7 @@
 				DEVELOPMENT_TEAM = KVZCD8H3X4;
 				INFOPLIST_FILE = MyBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreivataselu.MyBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreivataselu.mybooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,7 +476,7 @@
 				DEVELOPMENT_TEAM = KVZCD8H3X4;
 				INFOPLIST_FILE = MyBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreivataselu.MyBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreivataselu.mybooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
