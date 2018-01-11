@@ -24,8 +24,9 @@ class ViewController: UIViewController {
         barcodeScanner.codeDelegate = self
         barcodeScanner.errorDelegate = self
         barcodeScanner.dismissalDelegate = self
-
-    }
+        
+        }
+    
     
     @IBAction func scanCode() {
         present(barcodeScanner, animated: true, completion: nil)

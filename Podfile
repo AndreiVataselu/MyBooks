@@ -10,5 +10,8 @@ target 'MyBooks' do
     pod 'Alamofire'
     pod 'Kingfisher'
     pod 'BarcodeScanner'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Core'
 
 end

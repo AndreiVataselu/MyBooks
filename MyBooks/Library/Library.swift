@@ -48,6 +48,7 @@ class Library {
                         
                     })
                     
+                    //MARK: Adding book to DB.
                     self.books.append(Book(bookTitle: bookDetails["title"]!,
                                                       bookAuthor: bookDetails["author"]!,
                                                       bookNumOfPages: Int(bookDetails["pages"]!)!,

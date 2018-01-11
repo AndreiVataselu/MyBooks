@@ -11,6 +11,8 @@
 		F10E6CDB200625B10075E6C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDA200625B10075E6C3 /* Book.swift */; };
 		F10E6CDD200626A20075E6C3 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDC200626A20075E6C3 /* Library.swift */; };
 		F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AADA920054C5500BEB80F /* XMLResult.swift */; };
+		F1C6815D2007B13B002703CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1C6815C2007B13B002703CA /* GoogleService-Info.plist */; };
+		F1C681602007B17B002703CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C6815F2007B17B002703CA /* User.swift */; };
 		F1D6B44A2003BFB500DE23B4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6B4492003BFB500DE23B4 /* Networking.swift */; };
 		F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EF720039A6F003038E7 /* AppDelegate.swift */; };
 		F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EF920039A6F003038E7 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		F10E6CDA200625B10075E6C3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		F10E6CDC200626A20075E6C3 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F15AADA920054C5500BEB80F /* XMLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResult.swift; sourceTree = "<group>"; };
+		F1C6815C2007B13B002703CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1C6815F2007B17B002703CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F1D6B4492003BFB500DE23B4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F1DC5EF420039A6F003038E7 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DC5EF720039A6F003038E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		F1C6815E2007B171002703CA /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				F1C6815F2007B17B002703CA /* User.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		F1D6B4482003BF9300DE23B4 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 		F1DC5EF620039A6F003038E7 /* MyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				F1C6815E2007B171002703CA /* Users */,
 				F10E6CDF20062A2B0075E6C3 /* ViewControllers */,
 				F10E6CDE20062A1F0075E6C3 /* Library */,
 				F1E328CB200508CF003CE197 /* Extension Files */,
@@ -124,6 +137,7 @@
 				F1DC5F0120039A6F003038E7 /* Assets.xcassets */,
 				F1DC5F0320039A6F003038E7 /* LaunchScreen.storyboard */,
 				F1DC5F0620039A6F003038E7 /* Info.plist */,
+				F1C6815C2007B13B002703CA /* GoogleService-Info.plist */,
 				F1DC5EFE20039A6F003038E7 /* MyBooks.xcdatamodeld */,
 			);
 			path = MyBooks;
@@ -209,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1DC5F0520039A6F003038E7 /* LaunchScreen.storyboard in Resources */,
+				F1C6815D2007B13B002703CA /* GoogleService-Info.plist in Resources */,
 				F1DC5F0220039A6F003038E7 /* Assets.xcassets in Resources */,
 				F1DC5EFD20039A6F003038E7 /* Main.storyboard in Resources */,
 			);
@@ -244,15 +259,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -286,6 +309,7 @@
 				F10E6CDB200625B10075E6C3 /* Book.swift in Sources */,
 				F10E6CDD200626A20075E6C3 /* Library.swift in Sources */,
 				F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */,
+				F1C681602007B17B002703CA /* User.swift in Sources */,
 				F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */,
 				F1DC5F0020039A6F003038E7 /* MyBooks.xcdatamodeld in Sources */,
 				F1D6B44A2003BFB500DE23B4 /* Networking.swift in Sources */,

@@ -1,21 +1,77 @@
 PODS:
-  - Alamofire (4.5.1)
-  - BarcodeScanner (3.0.0)
-  - Kingfisher (4.2.0)
-  - SWXMLHash (4.2.3)
+  - Alamofire (4.6.0)
+  - BarcodeScanner (3.0.3)
+  - Firebase/Auth (4.8.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.4.1)
+  - Firebase/Core (4.8.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.13)
+  - Firebase/Database (4.8.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.3)
+  - FirebaseAnalytics (4.0.5):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseAuth (4.4.1):
+    - FirebaseAnalytics (~> 4.0)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (4.0.13):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.3):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (2.0.8):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GTMSessionFetcher/Core (1.1.12)
+  - Kingfisher (4.6.1)
+  - leveldb-library (1.20)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - SWXMLHash (4.2.5)
 
 DEPENDENCIES:
   - Alamofire
   - BarcodeScanner
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
   - Kingfisher
   - SWXMLHash
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  BarcodeScanner: 4ba61e8b2d50da7b17685085d4bb8e1a0c14613e
-  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
-  SWXMLHash: 6ab10e1cb4567d88cd3634be0bf331a7839945dd
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  BarcodeScanner: 0ecc25fb8b37e1d34cae9838a4b18b19df2786a2
+  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
+  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
+  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SWXMLHash: eb16013c6f654853980822e0a778c9d66e017dde
 
-PODFILE CHECKSUM: 2439f89da3acf95ddd02b439e82a97afa76e68fe
+PODFILE CHECKSUM: 09d6dd368dd6ac35c22fdadb603973b29137ec10
 
 COCOAPODS: 1.3.1
