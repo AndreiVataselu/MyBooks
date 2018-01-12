@@ -18,7 +18,7 @@ extension ViewController: BarcodeScannerCodeDelegate {
             if bookExists {
                 print("Book already exists!")
             } else {
-                self.userLibrary.addBook(ISBN: code) { (foundBook) in
+                self.userLibrary.addBookToDatabase(ISBN: code) { (foundBook) in
                     
                     if !foundBook {
                         print("This book does not exists in our database.")

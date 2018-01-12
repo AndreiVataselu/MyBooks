@@ -63,9 +63,34 @@ class User {
         }
     }
     
-    static func fetchLibrary() -> Library {
+    static func fetchLibrary(_ library: @escaping (Library) -> Void) {
         let userLibrary = Library.newLibrary()
         
-        return userLibrary
+        databaseReference!.child("users").child(User.id).child("books").observeSingleEvent(of: DataEventType.value) { (snapshot) in
+            let books = snapshot.value as? NSDictionary ?? [:]
+
+            if books.count > 0 {
+            
+                var booksLoaded = 0
+                
+            for book in books {
+
+                let fetchedBook = book.value as? [String:String] ?? [:]
+
+                Networking.downloadImageFor(link: fetchedBook["imageURL"]!, imageResult: { (image) in
+                    userLibrary.books.append(Book(bookTitle: fetchedBook["title"]!,
+                                                  bookAuthor: fetchedBook["author"]!,
+                                                  bookNumOfPages: Int(fetchedBook["pages"]!)!,
+                                                  bookPicture: image))
+                 booksLoaded += 1
+                    if booksLoaded == books.count {
+                        library(userLibrary)
+                    }
+                })
+            }
+            } else {
+                library(userLibrary)
+            }
+        }
     }
 }

@@ -33,11 +33,10 @@ class Library {
             } else {
                 bookExists(false)
             }
-
         }
     }
     
-    func addBook(ISBN: String, foundBook: @escaping (Bool) -> Void){
+    func addBookToDatabase(ISBN: String, foundBook: @escaping (Bool) -> Void){
         
         var xmlFile : XML?
         var errorXML : Error?

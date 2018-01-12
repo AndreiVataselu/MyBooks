@@ -25,7 +25,13 @@ class ViewController: UIViewController {
         barcodeScanner.errorDelegate = self
         barcodeScanner.dismissalDelegate = self
         
-        User.login(email: "vataseluandrei1@gmail.com", password: "parolamea") { (_) in }
+        User.login(email: "vataseluandrei1@gmail.com", password: "parolamea") { (_) in
+            User.fetchLibrary({ (library) in
+                let userLibrary = library
+                print(userLibrary.books.count)
+            })
+        }
+        
         
         }
     
