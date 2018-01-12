@@ -22,3 +22,4 @@ struct Book {
         self.picture = bookPicture
     }
 }
+

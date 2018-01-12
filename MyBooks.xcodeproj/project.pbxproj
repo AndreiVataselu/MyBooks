@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1572D75CD1AE8400F712AB35 /* Pods_MyBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */; };
 		F104538D2007E0C2000035AC /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104538C2007E0C2000035AC /* VCExtension.swift */; };
+		F10626EA2009686B00C60442 /* UserLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626E92009686B00C60442 /* UserLibraryVC.swift */; };
+		F10626EC200970C400C60442 /* UserLibraryVCext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626EB200970C400C60442 /* UserLibraryVCext.swift */; };
+		F10626EE2009710300C60442 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626ED2009710300C60442 /* BookViewCell.swift */; };
 		F10E6CDB200625B10075E6C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDA200625B10075E6C3 /* Book.swift */; };
 		F10E6CDD200626A20075E6C3 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDC200626A20075E6C3 /* Library.swift */; };
 		F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AADA920054C5500BEB80F /* XMLResult.swift */; };
@@ -29,6 +32,9 @@
 		9D7A0F8866666C178ED8EAEB /* Pods-MyBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		C7735DF047D2AAC706139B54 /* Pods-MyBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.release.xcconfig"; sourceTree = "<group>"; };
 		F104538C2007E0C2000035AC /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
+		F10626E92009686B00C60442 /* UserLibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLibraryVC.swift; sourceTree = "<group>"; };
+		F10626EB200970C400C60442 /* UserLibraryVCext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLibraryVCext.swift; sourceTree = "<group>"; };
+		F10626ED2009710300C60442 /* BookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
 		F10E6CDA200625B10075E6C3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		F10E6CDC200626A20075E6C3 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F15AADA920054C5500BEB80F /* XMLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResult.swift; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 			children = (
 				F10E6CDC200626A20075E6C3 /* Library.swift */,
 				F10E6CDA200625B10075E6C3 /* Book.swift */,
+				F10626ED2009710300C60442 /* BookViewCell.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F1DC5EF920039A6F003038E7 /* ViewController.swift */,
+				F10626E92009686B00C60442 /* UserLibraryVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F104538C2007E0C2000035AC /* VCExtension.swift */,
+				F10626EB200970C400C60442 /* UserLibraryVCext.swift */,
 			);
 			path = "Extension Files";
 			sourceTree = "<group>";
@@ -314,8 +323,11 @@
 				F1FA3F9C2003DDB8004C6F81 /* XML.swift in Sources */,
 				F10E6CDB200625B10075E6C3 /* Book.swift in Sources */,
 				F10E6CDD200626A20075E6C3 /* Library.swift in Sources */,
+				F10626EC200970C400C60442 /* UserLibraryVCext.swift in Sources */,
 				F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */,
+				F10626EE2009710300C60442 /* BookViewCell.swift in Sources */,
 				F1C681602007B17B002703CA /* User.swift in Sources */,
+				F10626EA2009686B00C60442 /* UserLibraryVC.swift in Sources */,
 				F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */,
 				F1DC5F0020039A6F003038E7 /* MyBooks.xcdatamodeld in Sources */,
 				F1D6B44A2003BFB500DE23B4 /* Networking.swift in Sources */,
