@@ -12,4 +12,6 @@ class BookViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bookImage : UIImageView!
     
+    var state : CellState = CellState.notSelected
+    
 }

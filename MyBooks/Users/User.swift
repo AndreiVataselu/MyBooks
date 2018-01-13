@@ -81,7 +81,8 @@ class User {
                     userLibrary.books.append(Book(bookTitle: fetchedBook["title"]!,
                                                   bookAuthor: fetchedBook["author"]!,
                                                   bookNumOfPages: Int(fetchedBook["pages"]!)!,
-                                                  bookPicture: image))
+                                                  bookPicture: image,
+                                                  pagesRead: Int(fetchedBook["pagesRead"]!)!))
                  booksLoaded += 1
                     if booksLoaded == books.count {
                         library(userLibrary)

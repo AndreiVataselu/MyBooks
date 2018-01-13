@@ -17,12 +17,16 @@ class UserLibraryVC: UIViewController {
         super.viewDidLoad()
 
         User.login(email: "vataseluandrei1@gmail.com", password: "parolamea") { (_) in
-            User.fetchLibrary { (library) in
-                self.userLibrary = library
-
-                self.collectionView.reloadData()
-            }
+           self.populateCollectionView()
         }        
+    }
+    
+    func populateCollectionView() {
+        User.fetchLibrary { (library) in
+            self.userLibrary = library
+            
+            self.collectionView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {

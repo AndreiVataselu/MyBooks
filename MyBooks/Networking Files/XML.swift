@@ -69,6 +69,8 @@ class XML {
         default:break
         }
         
+        bookDetails["pagesRead"] = "0"
+        
         return bookDetails
     }
 }

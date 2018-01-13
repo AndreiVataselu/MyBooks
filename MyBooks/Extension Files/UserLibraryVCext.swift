@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+enum CellState {
+    case selected
+    case notSelected
+}
 
 extension UserLibraryVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -23,4 +27,30 @@ extension UserLibraryVC : UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? BookViewCell {
+
+            let view = UIView()
+            view.frame = cell.contentView.bounds
+            view.backgroundColor = UIColor.white
+            view.alpha = 0.5
+            
+            if cell.state == .notSelected {
+                cell.addSubview(view)
+                cell.state = .selected
+                print("Selected cell at \(indexPath.row)")
+
+            } else {
+                cell.subviews[1].removeFromSuperview()
+                cell.state = .notSelected
+                print("Deselected cell at \(indexPath.row)")
+
+            }
+        
+    }
+}
+    
+    
 }

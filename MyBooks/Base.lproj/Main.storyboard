@@ -91,9 +91,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FcN-Zm-eZ0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XGB-np-Uqs">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="3" id="XGB-np-Uqs">
                                     <size key="itemSize" width="100" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -128,7 +128,7 @@
                         <constraints>
                             <constraint firstItem="FcN-Zm-eZ0" firstAttribute="trailing" secondItem="fPX-q2-WRL" secondAttribute="trailing" id="52b-dd-KvP"/>
                             <constraint firstItem="FcN-Zm-eZ0" firstAttribute="bottom" secondItem="fPX-q2-WRL" secondAttribute="bottom" id="GV6-xP-vmg"/>
-                            <constraint firstItem="FcN-Zm-eZ0" firstAttribute="top" secondItem="mWA-dP-g1X" secondAttribute="top" id="m35-M9-Tgf"/>
+                            <constraint firstItem="FcN-Zm-eZ0" firstAttribute="top" secondItem="mWA-dP-g1X" secondAttribute="top" constant="50" id="m35-M9-Tgf"/>
                             <constraint firstItem="FcN-Zm-eZ0" firstAttribute="leading" secondItem="fPX-q2-WRL" secondAttribute="leading" id="p5c-J5-xyd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fPX-q2-WRL"/>
