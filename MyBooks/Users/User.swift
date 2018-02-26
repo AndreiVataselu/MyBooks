@@ -82,7 +82,9 @@ class User {
                                                   bookAuthor: fetchedBook["author"]!,
                                                   bookNumOfPages: Int(fetchedBook["pages"]!)!,
                                                   bookPicture: image,
-                                                  pagesRead: Int(fetchedBook["pagesRead"]!)!))
+                                                  pagesRead: Int(fetchedBook["pagesRead"]!)!,
+                                                  imageURL: fetchedBook["imageURL"]!,
+                                                  ISBN: fetchedBook["ISBN"]!))
                  booksLoaded += 1
                     if booksLoaded == books.count {
                         library(userLibrary)

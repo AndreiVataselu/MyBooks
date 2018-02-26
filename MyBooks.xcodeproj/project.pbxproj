@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1572D75CD1AE8400F712AB35 /* Pods_MyBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */; };
-		F104538D2007E0C2000035AC /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104538C2007E0C2000035AC /* VCExtension.swift */; };
 		F10626EA2009686B00C60442 /* UserLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626E92009686B00C60442 /* UserLibraryVC.swift */; };
 		F10626EC200970C400C60442 /* UserLibraryVCext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626EB200970C400C60442 /* UserLibraryVCext.swift */; };
 		F10626EE2009710300C60442 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10626ED2009710300C60442 /* BookViewCell.swift */; };
+		F106DF1A20112D43004C5771 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106DF1920112D43004C5771 /* LoginVC.swift */; };
 		F10E6CDB200625B10075E6C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDA200625B10075E6C3 /* Book.swift */; };
 		F10E6CDD200626A20075E6C3 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E6CDC200626A20075E6C3 /* Library.swift */; };
 		F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AADA920054C5500BEB80F /* XMLResult.swift */; };
+		F196708D2043073E002349A3 /* AddBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196708C2043073E002349A3 /* AddBookVC.swift */; };
 		F1C6815D2007B13B002703CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1C6815C2007B13B002703CA /* GoogleService-Info.plist */; };
 		F1C681602007B17B002703CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C6815F2007B17B002703CA /* User.swift */; };
+		F1CFD102200FD7B700CDDE73 /* TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CFD101200FD7B700CDDE73 /* TextFieldExt.swift */; };
 		F1D6B44A2003BFB500DE23B4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6B4492003BFB500DE23B4 /* Networking.swift */; };
 		F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EF720039A6F003038E7 /* AppDelegate.swift */; };
-		F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EF920039A6F003038E7 /* ViewController.swift */; };
 		F1DC5EFD20039A6F003038E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DC5EFB20039A6F003038E7 /* Main.storyboard */; };
 		F1DC5F0020039A6F003038E7 /* MyBooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1DC5EFE20039A6F003038E7 /* MyBooks.xcdatamodeld */; };
 		F1DC5F0220039A6F003038E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DC5F0120039A6F003038E7 /* Assets.xcassets */; };
 		F1DC5F0520039A6F003038E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DC5F0320039A6F003038E7 /* LaunchScreen.storyboard */; };
+		F1EF8D2E20100B8A006D166E /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF8D2D20100B8A006D166E /* UIViewExt.swift */; };
 		F1FA3F9C2003DDB8004C6F81 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FA3F9B2003DDB8004C6F81 /* XML.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,24 +33,26 @@
 		29D4CEEB36B8581B355D17CB /* Pods_MyBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7A0F8866666C178ED8EAEB /* Pods-MyBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		C7735DF047D2AAC706139B54 /* Pods-MyBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBooks/Pods-MyBooks.release.xcconfig"; sourceTree = "<group>"; };
-		F104538C2007E0C2000035AC /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		F10626E92009686B00C60442 /* UserLibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLibraryVC.swift; sourceTree = "<group>"; };
 		F10626EB200970C400C60442 /* UserLibraryVCext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLibraryVCext.swift; sourceTree = "<group>"; };
 		F10626ED2009710300C60442 /* BookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
+		F106DF1920112D43004C5771 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F10E6CDA200625B10075E6C3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		F10E6CDC200626A20075E6C3 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F15AADA920054C5500BEB80F /* XMLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResult.swift; sourceTree = "<group>"; };
+		F196708C2043073E002349A3 /* AddBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookVC.swift; sourceTree = "<group>"; };
 		F1C6815C2007B13B002703CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1C6815F2007B17B002703CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F1CFD101200FD7B700CDDE73 /* TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExt.swift; sourceTree = "<group>"; };
 		F1D6B4492003BFB500DE23B4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F1DC5EF420039A6F003038E7 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DC5EF720039A6F003038E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1DC5EF920039A6F003038E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1DC5EFC20039A6F003038E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1DC5EFF20039A6F003038E7 /* MyBooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyBooks.xcdatamodel; sourceTree = "<group>"; };
 		F1DC5F0120039A6F003038E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1DC5F0420039A6F003038E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1DC5F0620039A6F003038E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1EF8D2D20100B8A006D166E /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		F1FA3F9B2003DDB8004C6F81 /* XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +98,9 @@
 		F10E6CDF20062A2B0075E6C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1DC5EF920039A6F003038E7 /* ViewController.swift */,
 				F10626E92009686B00C60442 /* UserLibraryVC.swift */,
+				F106DF1920112D43004C5771 /* LoginVC.swift */,
+				F196708C2043073E002349A3 /* AddBookVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,8 +161,9 @@
 		F1E328CB200508CF003CE197 /* Extension Files */ = {
 			isa = PBXGroup;
 			children = (
-				F104538C2007E0C2000035AC /* VCExtension.swift */,
 				F10626EB200970C400C60442 /* UserLibraryVCext.swift */,
+				F1CFD101200FD7B700CDDE73 /* TextFieldExt.swift */,
+				F1EF8D2D20100B8A006D166E /* UIViewExt.swift */,
 			);
 			path = "Extension Files";
 			sourceTree = "<group>";
@@ -202,7 +208,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Andrei Vataselu";
 				TargetAttributes = {
 					F1DC5EF320039A6F003038E7 = {
@@ -318,14 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F104538D2007E0C2000035AC /* VCExtension.swift in Sources */,
 				F15AADAA20054C5500BEB80F /* XMLResult.swift in Sources */,
 				F1FA3F9C2003DDB8004C6F81 /* XML.swift in Sources */,
 				F10E6CDB200625B10075E6C3 /* Book.swift in Sources */,
+				F1EF8D2E20100B8A006D166E /* UIViewExt.swift in Sources */,
+				F196708D2043073E002349A3 /* AddBookVC.swift in Sources */,
 				F10E6CDD200626A20075E6C3 /* Library.swift in Sources */,
 				F10626EC200970C400C60442 /* UserLibraryVCext.swift in Sources */,
-				F1DC5EFA20039A6F003038E7 /* ViewController.swift in Sources */,
 				F10626EE2009710300C60442 /* BookViewCell.swift in Sources */,
+				F1CFD102200FD7B700CDDE73 /* TextFieldExt.swift in Sources */,
+				F106DF1A20112D43004C5771 /* LoginVC.swift in Sources */,
 				F1C681602007B17B002703CA /* User.swift in Sources */,
 				F10626EA2009686B00C60442 /* UserLibraryVC.swift in Sources */,
 				F1DC5EF820039A6F003038E7 /* AppDelegate.swift in Sources */,
@@ -370,6 +378,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -377,6 +386,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -427,6 +437,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -434,6 +445,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

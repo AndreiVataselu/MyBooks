@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import BarcodeScanner
 
 enum CellState {
     case selected
@@ -48,9 +49,52 @@ extension UserLibraryVC : UICollectionViewDelegate, UICollectionViewDataSource {
                 print("Deselected cell at \(indexPath.row)")
 
             }
-        
+        }
     }
 }
-    
+
+extension UserLibraryVC: BarcodeScannerCodeDelegate {
+    func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+        print(code)
+        
+        userLibrary?.checkForExistingBookInLibrary(ISBN: code) { (bookExists) in
+            if bookExists {
+                print("Book already exists!")
+            } else {
+                self.userLibrary?.prepareBook(ISBN: code) { (foundBook,book)  in
+                    
+                    if foundBook == false {
+                        print("This book does not exists in our database.")
+                    } else {
+                         let bookScreen = self.storyboard?.instantiateViewController(withIdentifier: "AddBookVC") as! AddBookVC
+                        if let bookFound = book {
+                            bookScreen.book = bookFound
+                            }
+                            self.navigationController?.pushViewController(bookScreen, animated: true)
+                        
+                    }
+                }
+            }
+            
+            DispatchQueue.main.async {
+                controller.reset()
+                controller.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
     
 }
+
+extension UserLibraryVC: BarcodeScannerErrorDelegate {
+    func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
+        print(error)
+    }
+}
+
+extension UserLibraryVC: BarcodeScannerDismissalDelegate {
+    func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
+        controller.reset()
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
+

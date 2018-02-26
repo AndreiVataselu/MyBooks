@@ -15,13 +15,17 @@ struct Book {
     var numberOfPages : Int
     var picture : UIImage
     var pagesRead : Int
+    var imageURL : String
+    var ISBN : String
     
-    init(bookTitle: String, bookAuthor: String, bookNumOfPages: Int, bookPicture: UIImage, pagesRead: Int) {
+    init(bookTitle: String, bookAuthor: String, bookNumOfPages: Int, bookPicture: UIImage, pagesRead: Int, imageURL: String, ISBN: String) {
         self.title = bookTitle
         self.author = bookAuthor
         self.numberOfPages = bookNumOfPages
         self.picture = bookPicture
         self.pagesRead = pagesRead
+        self.imageURL = imageURL
+        self.ISBN = ISBN
     }
 }
 

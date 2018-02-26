@@ -25,7 +25,7 @@ class Library {
         return Library()
     }
     
-    func checkForExistingBook(ISBN: String, bookExists: @escaping (Bool) -> Void){
+    func checkForExistingBookInLibrary(ISBN: String, bookExists: @escaping (Bool) -> Void){
         databaseReference!.child("users").child(User.id).child("books").observeSingleEvent(of: DataEventType.value) { (snapshot) in
             let value = snapshot.value as? NSDictionary ?? [:]
             if let _ = value[ISBN] {
@@ -36,7 +36,7 @@ class Library {
         }
     }
     
-    func addBookToDatabase(ISBN: String, foundBook: @escaping (Bool) -> Void){
+    func prepareBook(ISBN: String, foundBook: @escaping (Bool?,Book?) -> Void){
         
         var xmlFile : XML?
         var errorXML : Error?
@@ -54,17 +54,25 @@ class Library {
                         if xmlIsSuccesful.validFile {
                             let bookDetails = xmlIsSuccesful.getBookDetails()
                             
-                            //MARK: Adding book to DB.
-                            databaseReference!.child("users").child(User.id).child("books").child(ISBN).setValue(bookDetails)
+                            var book : Book?
                             
-                            foundBook(true)
+                            Networking.downloadImageFor(link: bookDetails["imageURL"]!, imageResult: { (image) in
+                                book = Book(bookTitle: bookDetails["title"]!,
+                                            bookAuthor: bookDetails["author"]!,
+                                            bookNumOfPages: Int(bookDetails["pages"]!)!,
+                                            bookPicture: image ,
+                                            pagesRead: 0,
+                                            imageURL: bookDetails["imageURL"]!,
+                                            ISBN: ISBN)
+                                foundBook(true,book)
+                            })
                             
                         } else {
                             print("Book not found!")
-                            foundBook(false)
+                            foundBook(false,nil)
                         }
                     } else {
-                        foundBook(false)
+                        foundBook(false,nil)
                         print("Error - \(String(describing: errorXML))")
                     }
                 }

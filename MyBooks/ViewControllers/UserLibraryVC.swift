@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import BarcodeScanner
 
 class UserLibraryVC: UIViewController {
     
     @IBOutlet weak var collectionView : UICollectionView!
     var userLibrary : Library?
+    let barcodeScanner = BarcodeScannerViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        User.login(email: "vataseluandrei1@gmail.com", password: "parolamea") { (_) in
-           self.populateCollectionView()
-        }        
+        populateCollectionView()
+        
+        barcodeScanner.codeDelegate = self
+        barcodeScanner.errorDelegate = self
+        barcodeScanner.dismissalDelegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        populateCollectionView()
     }
     
     func populateCollectionView() {
@@ -29,9 +36,8 @@ class UserLibraryVC: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addNewBook() {
+      present(barcodeScanner, animated: true, completion: nil)
     }
     
 }
